@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>エンドレスデラックスナイトメアブラックDENKEN</title>
+    <style>
+        body {
+            background-color: #333;
+            margin: 0;
+            overflow: hidden;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: -1;
+        }
+
+        #home {
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>エンドレスデラックスナイトメアブラックDENKEN</h1>
+    </header>
+    <iframe src="/home/home.html" id="home"></iframe>
+    <script>
+        const home = document.getElementById("home");
+
+        function updateCanvasSize() {
+            var viewportWidth = window.innerWidth;
+            var viewportHeight = window.innerHeight;
+
+            home.width = viewportWidth;
+            home.height = viewportHeight;
+        }
+        // 最初に一度実行して初期化
+        updateCanvasSize();
+        window.addEventListener("resize", updateCanvasSize);
+    </script>
+</body>
+</html>
