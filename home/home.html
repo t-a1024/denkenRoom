@@ -25,6 +25,24 @@
             height: 100%;
             z-index: 1;
             display: none;
+            animation-name: iframeAnimation;
+            animation-duration: 1s;
+        }
+        @keyframes iframeAnimation {
+            0%{
+                width: 0%;
+                height: 0%;
+                filter: opacity(0%);
+            }
+            30%{
+                width: 80%;
+                height: 100%;
+            }
+            100%{
+                width: 80%;
+                height: 100%;
+                filter: opacity(100%);
+            }
         }
     </style>
 </head>
